@@ -5,19 +5,19 @@ pygame.init()
 
 x = 200
 y = 200
-window_width = 1600
-window_height = 900
+
 width = 300
 height = 150
 velocity_x = 4
 velocity_y = 4
 
+info = pygame.display.Info()
+window_width, window_height = info.current_w, info.current_h
+
+
 
 window = pygame.display.set_mode((window_width, window_height))
 pygame.display.set_caption("DVD")
-
-icon = pygame.image.load('cassette.png')
-pygame.display.set_icon(icon)
 
 logo = pygame.image.load('dvd-logo.png').convert_alpha()
 logo = pygame.transform.scale(logo, (width, height))
